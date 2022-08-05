@@ -17,7 +17,7 @@ const showCharacters = characters => {
                             #${id}
                         </p>
                         <img 
-                        class="object-cover w-full" 
+                        class="object-cover w-full h-full" 
                         src="${image}" 
                         alt="${name}"
                         >
