@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script defer src="./js/form.js"></script>
+		<title>Formulario</title>
+	</head>
+	<body>
+		<div class="container mx-auto max-w-4xl px-2">
+			<header class="my-10">
+				<h1 class="font-medium text-2xl">🚀 Trabajo Práctico 1</h1>
+				<p class="font-medium text-2xl">⚛ Skill Factory React</p>
+				<p class="font-medium text-2xl">
+					👨‍💻 Mathías Ezequiel Latrónico
+				</p>
+			</header>
+			<main>
+				<article>
+					<h2 class="font-medium text-3xl">Formulario de contacto</h2>
+					<div class="flex gap-5 my-5">
+						<a
+							href="./index.html"
+							class="bg-violet-500 hover:bg-violet-600 text-white text-md font-semibold font-mono px-2 rounded hover:ring-offset-2 hover:ring-2 ring-violet-500/0 hover:ring-violet-500/50 transition"
+						>
+							Volver al inicio
+						</a>
+					</div>
+					<form id="form" class="grid grid-cols-1 gap-6 max-w-md">
+						<label for="name" class="block">
+							<span class="text-lg"> Nombre </span>
+							<input
+								type="text"
+								id="name"
+								class="mt-1 block w-full border rounded pt-1 pb-2 px-2 focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500"
+								name="name"
+								required
+							/>
+						</label>
+						<label for="email" class="block">
+							<span class="text-lg"> Correo electrónico </span>
+							<input
+								type="email"
+								id="email"
+								class="mt-1 block w-full border rounded pt-1 pb-2 px-2 focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500"
+								name="email"
+								required
+							/>
+						</label>
+						<label for="coment" class="block">
+							<span class="text-lg"> Comentario </span>
+							<textarea
+								id="coment"
+								rows="3"
+								class="mt-1 block w-full border rounded pt-1 pb-2 px-2 focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500"
+								name="coment"
+								required
+							></textarea>
+						</label>
+						<input
+							type="submit"
+							value="Enviar"
+							class="bg-violet-500 hover:bg-violet-600 rounded transition text-white font-semibold py-2"
+						/>
+					</form>
+				</article>
+			</main>
+		</div>
+	</body>
+</html>

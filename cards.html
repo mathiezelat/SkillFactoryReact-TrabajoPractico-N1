@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script defer src="./js/cards.js"></script>
+		<title>Rick & Morty</title>
+	</head>
+	<body>
+		<div class="container mx-auto max-w-4xl px-2">
+			<header class="my-10">
+				<h1 class="font-medium text-2xl">🚀 Trabajo Práctico 1</h1>
+				<p class="font-medium text-2xl">⚛ Skill Factory React</p>
+				<p class="font-medium text-2xl">
+					👨‍💻 Mathías Ezequiel Latrónico
+				</p>
+			</header>
+			<main>
+				<article>
+					<h2 class="font-medium text-3xl">Rick & Morty Cards</h2>
+					<div class="flex gap-5 my-5">
+						<a
+							href="./index.html"
+							class="bg-violet-500 hover:bg-violet-600 text-white text-md font-semibold font-mono px-2 rounded hover:ring-offset-2 hover:ring-2 ring-violet-500/0 hover:ring-violet-500/50 transition"
+						>
+							Volver al inicio
+						</a>
+					</div>
+					<div
+						class="grid grid-cols-1 md:grid-cols-2 gap-4 pb-4"
+						id="render-cards"
+					></div>
+				</article>
+			</main>
+		</div>
+	</body>
+</html>
