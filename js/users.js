@@ -40,9 +40,13 @@ const showUsers = users => {
 }
 
 const fetchUsers = async () => {
-	const response = await fetch(URL_USERS)
-	const users = await response.json()
-	showUsers(users)
+	try {
+		const response = await axios.get(URL_USERS)
+		const users = response.data
+		showUsers(users)
+	} catch (error) {
+		console.error('Ocurrio un error al traer los datos', error.message)
+	}
 }
 
 fetchUsers()
