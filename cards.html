@@ -28,6 +28,23 @@
 							Volver al inicio
 						</a>
 					</div>
+					<div class="flex justify-between py-2">
+						<button
+							class="bg-black text-white font-semibold px-4 border border-black border-2 hover:text-black hover:bg-white transition"
+							id="previous-page"
+						>
+							PREVIOUS PAGE
+						</button>
+						<button
+							class="bg-black text-white font-semibold px-4 border border-black border-2 hover:text-black hover:bg-white transition"
+							id="next-page"
+						>
+							NEXT PAGE
+						</button>
+					</div>
+					<div class="flex">
+						<p>Current page: <span id="current-page"></span></p>
+					</div>
 					<div
 						class="grid grid-cols-1 md:grid-cols-2 gap-4 pb-4"
 						id="render-cards"

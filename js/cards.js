@@ -3,6 +3,15 @@ const URL_RICK_AND_MORTY = 'https://rickandmortyapi.com/api/character'
 const $ = selector => document.querySelector(selector)
 
 const $renderCards = $('#render-cards')
+const $previousPage = $('#previous-page')
+const $nextPage = $('#next-page')
+const $currentPage = $('#current-page')
+
+let page = 1
+
+const showCurrentPage = page => {
+	$currentPage.innerHTML = page
+}
 
 const showCharacters = characters => {
 	body = ''
@@ -65,11 +74,29 @@ const showCharacters = characters => {
 	$renderCards.innerHTML = body
 }
 
-const fetchRickAndMorty = async () => {
-	const response = await fetch(URL_RICK_AND_MORTY)
-	const characters = await response.json()
-	console.log(characters.results)
-	showCharacters(characters.results)
+const fetchRickAndMorty = async page => {
+	try {
+		showCurrentPage(page)
+		const response = await fetch(`${URL_RICK_AND_MORTY}/?page=${page}`)
+		const characters = await response.json()
+		showCharacters(characters.results)
+	} catch (error) {
+		console.error('Ocurrio un error al traer los datos', error.message)
+	}
 }
 
-fetchRickAndMorty()
+fetchRickAndMorty(page)
+
+$previousPage.addEventListener('click', () => {
+	if (page > 1) {
+		page--
+		fetchRickAndMorty(page)
+	}
+})
+
+$nextPage.addEventListener('click', () => {
+	if (page < 42) {
+		page++
+		fetchRickAndMorty(page)
+	}
+})
