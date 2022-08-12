@@ -1,6 +1,7 @@
 const $ = selector => document.querySelector(selector)
 
 const $form = $('#form')
+const $resultForm = $('#result-form')
 
 $form.addEventListener('submit', element => {
 	element.preventDefault()
@@ -14,5 +15,23 @@ $form.addEventListener('submit', element => {
 
 	console.log('Contacto', newContact)
 
-	$form.reset()
+	showResultForm(newContact)
+
+	// $form.reset()
 })
+
+const showResultForm = ({ name, email, coment }) => {
+	let body = `
+		<p>
+			Nombre: <span class="italic">${name}</span>
+		</p>
+		<p>
+			Correo electrónico: <span class="italic">${email}</span>
+		</p>
+		<p>
+			Comentario: <span class="italic">${coment}</span>
+		</p>
+	`
+
+	$resultForm.innerHTML = body
+}
