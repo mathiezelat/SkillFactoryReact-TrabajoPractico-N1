@@ -17,7 +17,7 @@ $form.addEventListener('submit', element => {
 
 	showResultForm(newContact)
 
-	// $form.reset()
+	$form.reset()
 })
 
 const showResultForm = ({ name, email, coment }) => {
