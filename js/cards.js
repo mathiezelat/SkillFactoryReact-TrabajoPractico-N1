@@ -19,7 +19,7 @@ const showCharacters = characters => {
 	characters.forEach(
 		({ id, name, image, status, species, gender, origin }) => {
 			body += `
-            <div class="rounded bg-violet-50 overflow-hidden shadow shadow-violet-500/20">
+            <div class="rounded bg-violet-50/50 overflow-hidden shadow shadow-violet-500/20">
                 <div class="flex gap-4">
                     <div class="basis-1/2 grow relative">
                         <p class="absolute top-2 left-3 text-lg font-bold text-violet-500">
